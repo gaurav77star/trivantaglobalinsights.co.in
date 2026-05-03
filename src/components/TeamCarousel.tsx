@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { teamMembers } from "@/data/teamData";
+
+const LinkedinIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
+  </svg>
+);
 
 const TeamCarousel = () => {
   return (
@@ -49,7 +55,7 @@ const TeamCarousel = () => {
                     <div className="flex gap-3 mt-3">
                       {member.linkedin && (
                         <span className="text-primary-foreground/70 hover:text-primary transition-colors">
-                          <Linkedin size={20} />
+                          <LinkedinIcon />
                         </span>
                       )}
                       {member.email && (

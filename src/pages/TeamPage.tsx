@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
-import { Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { teamMembers } from "@/data/teamData";
+
+const LinkedinIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
+  </svg>
+);
 
 const TeamPage = () => {
   return (
@@ -37,7 +43,7 @@ const TeamPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}
+                className="grid lg:grid-cols-2 gap-12 items-center"
               >
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="relative overflow-hidden rounded-xl shadow-elevated">
@@ -67,7 +73,7 @@ const TeamPage = () => {
                         href={member.linkedin}
                         className="flex items-center gap-2 bg-primary text-primary-foreground font-heading font-bold px-6 py-2.5 rounded-md hover:opacity-90 transition-opacity"
                       >
-                        <Linkedin size={18} /> LinkedIn
+                        <LinkedinIcon /> LinkedIn
                       </a>
                     )}
                     {member.email && (
