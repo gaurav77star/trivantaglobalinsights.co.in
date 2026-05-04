@@ -5,8 +5,11 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
+  { label: "Services", path: "/services" },
+  { label: "Industries", path: "/industries" },
   { label: "About Us", path: "/about" },
   { label: "Team", path: "/team" },
+  { label: "Careers", path: "/careers" },
   { label: "Contact", path: "/contact" },
 ];
 
