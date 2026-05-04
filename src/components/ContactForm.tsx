@@ -44,7 +44,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-bold text-lg text-foreground">Phone</h4>
-                  <p className="text-muted-foreground">+91 XXXXX XXXXX</p>
+                  <p className="text-muted-foreground">+91 91493 04139</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
