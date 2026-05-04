@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
-import TeamPage from "./pages/TeamPage.tsx";
+
 import ContactPage from "./pages/ContactPage.tsx";
 import ServicesPage from "./pages/ServicesPage.tsx";
 import IndustriesPage from "./pages/IndustriesPage.tsx";
@@ -25,7 +25,7 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/team" element={<TeamPage />} />
+          
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />

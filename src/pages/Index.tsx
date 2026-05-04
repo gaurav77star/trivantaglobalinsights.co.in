@@ -4,7 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import StatsSection from "@/components/StatsSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import MissionVision from "@/components/MissionVision";
-import TeamCarousel from "@/components/TeamCarousel";
+import WorkShowcase from "@/components/WorkShowcase";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -17,7 +17,7 @@ const Index = () => {
       <StatsSection />
       <WhyChooseUs />
       <MissionVision />
-      <TeamCarousel />
+      <WorkShowcase />
       <ContactForm />
       <Footer />
     </div>
