@@ -8,7 +8,7 @@ const ContactPage = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="pt-32 pb-20 bg-foreground relative overflow-hidden">
+      <section className="pt-20 relative overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute bottom-0 left-1/2 w-72 h-72 rounded-full bg-primary blur-3xl" />
         </div>

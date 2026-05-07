@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 import industriesHero from "@/assets/industries-hero.jpg";
 
 const industries = [
-  { icon: Landmark, title: "Banking & Financial Technology", desc: "Transform your financial operations with cutting-edge solutions that prioritize security, compliance, and customer satisfaction." },
-  { icon: Factory, title: "Industrial Operations & Manufacturing", desc: "Revolutionize your production capabilities through smart automation, predictive analytics, and lean operational strategies." },
-  { icon: Car, title: "Transportation & Connected Vehicles", desc: "Navigate the future of transportation with expertise in electric vehicles, smart connectivity, and autonomous systems." },
-  { icon: Zap, title: "Sustainable Energy & Resources", desc: "Accelerate your transition to sustainable energy solutions with advanced grid management, renewable integration, and resource optimization." },
-  { icon: ShoppingCart, title: "Commerce & Digital Retail", desc: "Create exceptional shopping experiences across all channels with personalized customer journeys and dynamic pricing strategies." },
-  { icon: HeartPulse, title: "Medical Technology & Insurance", desc: "Modernize patient care and insurance operations through digital health platforms, claims automation, and regulatory compliance." },
-  { icon: Building2, title: "Government & Civic Innovation", desc: "Enhance citizen services with transparent, accessible digital platforms that improve government efficiency and public engagement." },
-  { icon: Film, title: "Content Creation & Digital Entertainment", desc: "Amplify your content reach and audience engagement through advanced analytics, content optimization, and multi-platform distribution." },
-  { icon: Cpu, title: "Tech Innovation & Electronics", desc: "Accelerate product development and market penetration with agile methodologies, user-centered design, and scalable architecture." },
-  { icon: Plane, title: "Hospitality & Travel Experiences", desc: "Enhance traveler experiences with seamless booking systems, personalized recommendations, and integrated service platforms." },
-  { icon: GraduationCap, title: "Learning Solutions & EdTech", desc: "Transform learning experiences with adaptive technologies, student engagement platforms, and data-driven insights that personalize education." },
+  { icon: Landmark, title: "Banking & Financial Technology", desc: "We help banks, NBFCs, and fintech startups decode customer expectations, map financial product journeys, and benchmark against emerging digital trends to stay ahead in a fast-evolving landscape." },
+  { icon: Factory, title: "Industrial Operations & Manufacturing", desc: "From shop-floor insights to supply chain intelligence, we equip manufacturers with research that drives operational efficiency, product innovation, and smarter go-to-market decisions." },
+  { icon: Car, title: "Transportation & Connected Vehicles", desc: "Our research powers smarter mobility — helping automotive and logistics brands understand rider behavior, EV adoption patterns, and next-gen connectivity expectations." },
+  { icon: Zap, title: "Sustainable Energy & Resources", desc: "We partner with energy companies to study consumer attitudes toward sustainability, evaluate renewable adoption readiness, and forecast demand shifts across traditional and clean energy markets." },
+  { icon: ShoppingCart, title: "Commerce & Digital Retail", desc: "Whether it's e-commerce, quick commerce, or brick-and-mortar — we uncover what shoppers want, how they buy, and what keeps them coming back through shopper behavior and category research." },
+  { icon: HeartPulse, title: "Medical Technology & Insurance", desc: "We support pharma, medtech, and insurance firms with patient journey mapping, HCP perception studies, claims experience audits, and health policy research that informs better outcomes." },
+  { icon: Building2, title: "Government & Civic Innovation", desc: "Our public sector research helps government bodies and NGOs measure citizen satisfaction, evaluate program effectiveness, and design policy with real community feedback." },
+  { icon: Film, title: "Content Creation & Digital Entertainment", desc: "We help media houses, OTT platforms, and content creators understand audience preferences, consumption habits, and engagement patterns to build content strategies that resonate." },
+  { icon: Cpu, title: "Tech Innovation & Electronics", desc: "From SaaS platforms to consumer electronics, we deliver user experience research, feature prioritization studies, and competitive intelligence that fuels product-market fit." },
+  { icon: Plane, title: "Hospitality & Travel Experiences", desc: "We bring traveler insights to hotels, airlines, and tourism boards — studying booking behaviors, loyalty drivers, and experience expectations to elevate hospitality standards." },
+  { icon: GraduationCap, title: "Learning Solutions & EdTech", desc: "Our research helps EdTech companies and institutions understand learner needs, evaluate platform UX, and measure the effectiveness of digital learning tools across demographics." },
 ];
 
 const IndustriesPage = () => {
@@ -24,11 +24,11 @@ const IndustriesPage = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="pt-32 pb-20 bg-foreground relative overflow-hidden">
+      <section className="pt-20 relative overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={industriesHero} alt="" className="w-full h-full object-cover opacity-20" />
+          <img src={industriesHero} alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="absolute inset-0 bg-foreground/75" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">Industries</span>
