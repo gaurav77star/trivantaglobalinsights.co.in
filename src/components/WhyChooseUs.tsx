@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, BarChart3, Clock, Lightbulb, Shield, Headphones } from "lucide-react";
+import whyChooseImg from "@/assets/why-choose-us.jpg";
 
 const reasons = [
   { icon: Award, title: "Industry Expertise", desc: "Deep domain knowledge across 15+ industry sectors with proven research methodologies." },
@@ -14,21 +15,29 @@ const WhyChooseUs = () => {
   return (
     <section className="section-padding bg-background">
       <div className="container mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">Why Choose Us</span>
-          <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-            What Sets Us Apart
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            We combine expertise, innovation, and dedication to deliver research solutions that create real business value.
-          </p>
-        </motion.div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <img src={whyChooseImg} alt="Why choose Trivanta" width={1024} height={640} loading="lazy" className="rounded-xl shadow-card w-full h-auto object-cover" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">Why Choose Us</span>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-6">
+              What Sets Us Apart
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              We combine expertise, innovation, and dedication to deliver research solutions that create real business value.
+            </p>
+          </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((r, i) => (

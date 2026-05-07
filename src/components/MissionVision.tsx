@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Rocket, Eye } from "lucide-react";
+import missionImg from "@/assets/mission-vision.jpg";
 
 const MissionVision = () => {
   return (
@@ -18,7 +19,7 @@ const MissionVision = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-3 gap-10 items-center">
           {/* Mission Card */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -37,11 +38,21 @@ const MissionVision = () => {
                 Our Mission
               </h3>
               <p className="text-muted-foreground group-hover:text-primary-foreground/85 text-lg leading-relaxed transition-colors duration-500">
-                To empower businesses with precise, data-driven market research that unlocks growth opportunities, 
-                mitigates risks, and enables confident decision-making. We are committed to delivering actionable 
-                insights through innovative methodologies and deep industry expertise.
+                To empower businesses with precise, data-driven market research that unlocks growth opportunities,
+                mitigates risks, and enables confident decision-making.
               </p>
             </div>
+          </motion.div>
+
+          {/* Center Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="hidden lg:block"
+          >
+            <img src={missionImg} alt="Mission and Vision" width={1024} height={640} loading="lazy" className="rounded-2xl shadow-card w-full h-auto object-cover" />
           </motion.div>
 
           {/* Vision Card */}
@@ -62,9 +73,8 @@ const MissionVision = () => {
                 Our Vision
               </h3>
               <p className="text-muted-foreground group-hover:text-primary-foreground/85 text-lg leading-relaxed transition-colors duration-500">
-                To become a globally recognized market research powerhouse — the go-to partner for organizations 
-                seeking transformative insights. We envision a future where every business decision is backed by 
-                intelligent data and strategic foresight.
+                To become a globally recognized market research powerhouse — the go-to partner for organizations
+                seeking transformative insights backed by intelligent data.
               </p>
             </div>
           </motion.div>
