@@ -24,11 +24,11 @@ const IndustriesPage = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="pt-32 pb-20 bg-foreground relative overflow-hidden">
+      <section className="pt-20 relative overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={industriesHero} alt="" className="w-full h-full object-cover opacity-20" />
+          <img src={industriesHero} alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="absolute inset-0 bg-foreground/75" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">Industries</span>
