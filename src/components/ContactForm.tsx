@@ -53,7 +53,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-bold text-lg text-foreground">Email</h4>
-                  <p className="text-muted-foreground">info@trivantaglobal.com</p>
+                  <p className="text-muted-foreground">pmteams.trivantaglobalinsights@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

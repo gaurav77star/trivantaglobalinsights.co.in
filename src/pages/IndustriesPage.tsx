@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Landmark, Factory, Car, Zap, ShoppingCart, HeartPulse, Building2, Film, Cpu, Plane, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
+import industriesHero from "@/assets/industries-hero.jpg";
 
 const industries = [
   { icon: Landmark, title: "Banking & Financial Technology", desc: "Transform your financial operations with cutting-edge solutions that prioritize security, compliance, and customer satisfaction." },
@@ -24,9 +25,10 @@ const IndustriesPage = () => {
       <Header />
 
       <section className="pt-32 pb-20 bg-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute bottom-0 left-1/2 w-72 h-72 rounded-full bg-primary blur-3xl" />
+        <div className="absolute inset-0">
+          <img src={industriesHero} alt="" className="w-full h-full object-cover opacity-20" />
         </div>
+        <div className="absolute inset-0 bg-foreground/70" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">Industries</span>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import statsBg from "@/assets/stats-bg.jpg";
 
 const stats = [
   { value: 100, suffix: "+", label: "Projects Delivered" },
@@ -49,10 +50,10 @@ const CounterNumber = ({ target, suffix }: { target: number; suffix: string }) =
 const StatsSection = () => {
   return (
     <section className="section-padding bg-foreground relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-primary blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-primary blur-3xl" />
+      <div className="absolute inset-0">
+        <img src={statsBg} alt="" className="w-full h-full object-cover opacity-20" loading="lazy" />
       </div>
+      <div className="absolute inset-0 bg-foreground/80" />
       <div className="container mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

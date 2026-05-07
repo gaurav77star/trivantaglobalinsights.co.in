@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Search, BarChart3, Globe, Briefcase, Phone, FileText, Layers } from "lucide-react";
-
+import servicesHero from "@/assets/services-hero.jpg";
 const services = [
   {
     icon: Search,
@@ -48,9 +48,10 @@ const ServicesPage = () => {
       <Header />
 
       <section className="pt-32 pb-20 bg-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute bottom-0 left-1/2 w-72 h-72 rounded-full bg-primary blur-3xl" />
+        <div className="absolute inset-0">
+          <img src={servicesHero} alt="" className="w-full h-full object-cover opacity-20" />
         </div>
+        <div className="absolute inset-0 bg-foreground/70" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">Our Services</span>
