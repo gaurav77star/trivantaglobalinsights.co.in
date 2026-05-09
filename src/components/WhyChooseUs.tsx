@@ -47,12 +47,12 @@ const WhyChooseUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-lg p-8 hover-lift text-center group"
+              className="glass-card rounded-2xl p-8 text-center group cursor-pointer"
             >
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary transition-colors duration-300">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 ring-1 ring-primary/20">
                 <r.icon className="text-primary group-hover:text-primary-foreground transition-colors duration-300" size={28} />
               </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">{r.title}</h3>
+              <h3 className="font-heading text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{r.title}</h3>
               <p className="text-muted-foreground">{r.desc}</p>
             </motion.div>
           ))}

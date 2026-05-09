@@ -7,12 +7,16 @@ import MissionVision from "@/components/MissionVision";
 import WorkShowcase from "@/components/WorkShowcase";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import Marquee from "@/components/Marquee";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
       <Header />
       <HeroSection />
+      <Marquee />
       <AboutSection />
       <StatsSection />
       <WhyChooseUs />
