@@ -41,7 +41,7 @@ const CounterNumber = ({ target, suffix }: { target: number; suffix: string }) =
   }, [target]);
 
   return (
-    <div ref={ref} className="font-heading text-5xl md:text-6xl font-bold text-primary-foreground">
+    <div ref={ref} className="font-heading text-5xl md:text-7xl font-bold bg-gradient-to-br from-primary-foreground via-primary-foreground to-primary bg-clip-text text-transparent text-glow">
       {count}{suffix}
     </div>
   );
@@ -54,6 +54,8 @@ const StatsSection = () => {
         <img src={statsBg} alt="" className="w-full h-full object-cover opacity-20" loading="lazy" />
       </div>
       <div className="absolute inset-0 bg-foreground/80" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-primary/20 blur-[120px] animate-float-orb pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-orange-400/15 blur-[120px] animate-float-orb pointer-events-none" style={{ animationDelay: '5s' }} />
       <div className="container mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
