@@ -60,7 +60,7 @@ const NavDropdown = ({ label, items, isActive }: { label: string; items: Dropdow
         <ChevronDown size={16} className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div className="absolute top-full left-0 mt-1 w-56 glass-card rounded-xl shadow-elevated py-2 z-50 animate-dropdown-in origin-top">
+        <div className="absolute top-full left-0 mt-1 w-56 bg-background border border-border rounded-xl shadow-elevated py-2 z-50 animate-dropdown-in origin-top">
           {items.map((item) => (
             <Link
               key={item.label}
