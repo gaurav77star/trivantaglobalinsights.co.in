@@ -52,15 +52,15 @@ const NavDropdown = ({ label, items, isActive }: { label: string; items: Dropdow
     <div ref={ref} className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button
         onClick={() => setOpen(!open)}
-        className={`font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary flex items-center gap-1 ${
+        className={`nav-3d font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary flex items-center gap-1 ${
           isActive ? "text-primary" : "text-foreground"
         }`}
       >
-        {label}
-        <ChevronDown size={16} className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+        <span className="nav-3d-inner">{label}</span>
+        <ChevronDown size={16} className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div className="absolute top-full left-0 pt-0 w-56 bg-card border border-border rounded-lg shadow-elevated py-2 z-50">
+        <div className="absolute top-full left-0 mt-1 w-56 glass-card rounded-xl shadow-elevated py-2 z-50 animate-dropdown-in origin-top">
           {items.map((item) => (
             <Link
               key={item.label}
@@ -98,7 +98,7 @@ const Header = () => {
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-5">
           <Link
             to="/"
             className={`font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary ${
