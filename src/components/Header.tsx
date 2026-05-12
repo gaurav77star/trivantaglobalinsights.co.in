@@ -60,20 +60,30 @@ const NavDropdown = ({ label, items, isActive }: { label: string; items: Dropdow
         <span className="nav-3d-inner">{label}</span>
         <ChevronDown size={16} className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
-      {open && (
-        <div className="absolute top-full left-0 mt-1 w-56 bg-background border border-border rounded-xl shadow-elevated py-2 z-50 animate-dropdown-in origin-top">
-          {items.map((item) => (
-            <Link
-              key={item.label}
-              to={item.path}
-              onClick={() => setOpen(false)}
-              className="block px-4 py-2.5 font-body text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      )}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0, y: -6 }}
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            exit={{ opacity: 0, height: 0, y: -6 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute top-full left-0 mt-1 w-56 bg-background border border-border rounded-xl shadow-elevated z-50 overflow-hidden origin-top"
+          >
+            <div className="py-2">
+              {items.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  onClick={() => setOpen(false)}
+                  className="block px-4 py-2.5 font-body text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
