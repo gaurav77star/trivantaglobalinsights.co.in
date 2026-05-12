@@ -1,8 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Search, BarChart3, Globe, Briefcase, Phone, FileText, Layers } from "lucide-react";
+import { Search, BarChart3, Globe, Briefcase, Phone, FileText, Layers, Lightbulb, ClipboardList, Database, LineChart, Presentation, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import servicesHero from "@/assets/services-hero.jpg";
+
+const process = [
+  { icon: Lightbulb, step: "01", title: "Discover", desc: "We start by understanding your business questions, audience, and decision-making goals through stakeholder workshops." },
+  { icon: ClipboardList, step: "02", title: "Design", desc: "Our experts craft a tailored research framework — choosing methodology, sample, and tools aligned to your objectives." },
+  { icon: Database, step: "03", title: "Collect", desc: "We deploy quality-assured data collection across digital, telephone, and in-person channels with rigorous validation." },
+  { icon: LineChart, step: "04", title: "Analyze", desc: "Our analysts blend statistical rigor with strategic context to surface patterns, themes, and decision-ready insights." },
+  { icon: Presentation, step: "05", title: "Deliver", desc: "We translate findings into clear recommendations through workshops, dashboards, and executive-ready reports." },
+];
 const services = [
   {
     icon: Search,
