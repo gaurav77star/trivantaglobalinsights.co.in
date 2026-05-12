@@ -101,34 +101,34 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-4 lg:gap-5">
           <Link
             to="/"
-            className={`font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary ${
+            className={`nav-3d font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary ${
               location.pathname === "/" ? "text-primary" : "text-foreground"
             }`}
           >
-            Home
+            <span className="nav-3d-inner">Home</span>
           </Link>
           <NavDropdown label="Services" items={servicesDropdown} isActive={location.pathname === "/services"} />
           <NavDropdown label="Industries" items={industriesDropdown} isActive={location.pathname === "/industries"} />
           <Link
             to="/about"
-            className={`font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary ${
+            className={`nav-3d font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary ${
               location.pathname === "/about" ? "text-primary" : "text-foreground"
             }`}
           >
-            About Us
+            <span className="nav-3d-inner">About Us</span>
           </Link>
           <NavDropdown label="Careers" items={careersDropdown} isActive={location.pathname === "/careers"} />
           <Link
             to="/contact"
-            className={`font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary ${
+            className={`nav-3d font-heading font-semibold text-lg tracking-wide transition-colors duration-200 hover:text-primary ${
               location.pathname === "/contact" ? "text-primary" : "text-foreground"
             }`}
           >
-            Contact
+            <span className="nav-3d-inner">Contact</span>
           </Link>
           <Link
             to="/contact"
-            className="bg-primary text-primary-foreground font-heading font-bold px-6 py-2.5 rounded-md hover:opacity-90 transition-opacity tracking-wide"
+            className="btn-modern text-primary-foreground font-heading font-bold px-6 py-2.5 rounded-md tracking-wide ml-2"
           >
             Get In Touch
           </Link>
