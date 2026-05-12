@@ -230,3 +230,33 @@ nav a:hover::after, nav button:hover::after {
   box-shadow: 0 15px 30px -10px hsl(var(--primary) / 0.5);
 }
 
+/* 3D nav links */
+.nav-3d {
+  perspective: 600px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.15rem;
+}
+.nav-3d .nav-3d-inner {
+  display: inline-block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s, text-shadow 0.3s;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.nav-3d:hover .nav-3d-inner {
+  transform: rotateX(18deg) translateY(-2px) translateZ(6px);
+  text-shadow: 0 6px 14px hsl(var(--primary) / 0.45);
+}
+
+/* Dropdown smooth entrance */
+@keyframes dropdown-in {
+  0%   { opacity: 0; transform: translateY(-8px) scale(0.96) rotateX(-12deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0); }
+}
+.animate-dropdown-in {
+  animation: dropdown-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: top center;
+}
+
+/* Remove default underline pseudo on 3D nav (we use 3D lift instead) */
+nav .nav-3d::after { display: none; }
