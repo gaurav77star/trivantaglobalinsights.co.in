@@ -30,9 +30,9 @@ const services = [
   },
   {
     icon: Phone,
-    title: "CATI (Computer-Assisted Telephone Interviewing)",
-    desc: "Our CATI services combine the personal touch of human interaction with advanced interviewing systems. Ideal for reaching audiences beyond digital channels — niche communities, senior citizens, or regional markets.",
-    items: ["Immediate Response", "Personal Touch", "Cost-Efficient Reach", "Structured Oversight"],
+    title: "CAWI (Computer-Assisted Web Interviewing)",
+    desc: "Our CAWI services leverage modern web-based survey platforms to reach respondents anywhere, anytime. Ideal for fast turnaround studies, large-scale online panels, and engaging digital-first audiences with interactive questionnaires.",
+    items: ["Real-Time Data Capture", "Global Reach", "Rich Media Surveys", "Cost-Efficient Scale"],
   },
   {
     icon: Layers,
