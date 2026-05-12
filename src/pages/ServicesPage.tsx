@@ -1,8 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Search, BarChart3, Globe, Briefcase, Phone, FileText, Layers } from "lucide-react";
+import { Search, BarChart3, Globe, Briefcase, Phone, FileText, Layers, Lightbulb, ClipboardList, Database, LineChart, Presentation, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import servicesHero from "@/assets/services-hero.jpg";
+
+const process = [
+  { icon: Lightbulb, step: "01", title: "Discover", desc: "We start by understanding your business questions, audience, and decision-making goals through stakeholder workshops." },
+  { icon: ClipboardList, step: "02", title: "Design", desc: "Our experts craft a tailored research framework — choosing methodology, sample, and tools aligned to your objectives." },
+  { icon: Database, step: "03", title: "Collect", desc: "We deploy quality-assured data collection across digital, telephone, and in-person channels with rigorous validation." },
+  { icon: LineChart, step: "04", title: "Analyze", desc: "Our analysts blend statistical rigor with strategic context to surface patterns, themes, and decision-ready insights." },
+  { icon: Presentation, step: "05", title: "Deliver", desc: "We translate findings into clear recommendations through workshops, dashboards, and executive-ready reports." },
+];
 const services = [
   {
     icon: Search,
@@ -100,6 +109,51 @@ const ServicesPage = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="section-padding bg-secondary">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">How We Work</span>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3">Our Research Process</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mt-4 text-lg">A proven 5-step approach that turns ambiguous questions into clear, actionable answers.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {process.map((p, i) => (
+              <motion.div
+                key={p.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card rounded-xl shadow-card p-6 hover-lift relative"
+              >
+                <span className="absolute top-4 right-4 font-heading font-bold text-3xl text-primary/20">{p.step}</span>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <p.icon className="text-primary" size={22} />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-foreground mb-2">{p.title}</h3>
+                <p className="text-muted-foreground text-sm">{p.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-foreground">
+        <div className="container mx-auto text-center">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-primary-foreground mb-6">Ready to Turn Questions into Strategy?</h2>
+            <p className="text-primary-foreground/70 max-w-2xl mx-auto mb-8 text-lg">
+              Let's discuss your research needs and design a solution that delivers clarity, confidence, and competitive advantage.
+            </p>
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-heading font-bold px-8 py-3.5 rounded-md hover:opacity-90 transition-opacity text-lg">
+              Start a Project <ArrowRight size={18} />
+            </Link>
+          </motion.div>
         </div>
       </section>
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, Mail } from "lucide-react";
+import { CheckCircle, Mail, Target, Eye, Compass, Award, Users, Globe2 } from "lucide-react";
 import Header from "@/components/Header";
 import StatsSection from "@/components/StatsSection";
 import Footer from "@/components/Footer";
@@ -76,6 +76,72 @@ const AboutPage = () => {
                 ))}
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="section-padding bg-secondary">
+        <div className="container mx-auto">
+          <div className="text-center mb-14 max-w-3xl mx-auto">
+            <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">Our Story</span>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-6">A Decade of Decoding Markets</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Trivanta Global Insights was founded with a simple belief — that great decisions begin with great questions. What started as a small research practice has grown into a trusted partner for brands across India, the Middle East, Southeast Asia, and beyond. From boardrooms to grassroots consumer journeys, we've spent years turning raw data into the kind of clarity that drives bold moves.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: Target, title: "Mission", desc: "To empower organizations with research that doesn't just describe markets — it predicts them, shapes them, and turns insight into competitive advantage." },
+              { icon: Eye, title: "Vision", desc: "To be the most trusted insights partner for ambitious brands — the team that boards, founders, and CMOs call when the decision really matters." },
+              { icon: Compass, title: "Approach", desc: "We blend classical research rigor with modern tools — AI-assisted analysis, behavioral science, and real-world fieldwork — to deliver answers you can act on tomorrow." },
+            ].map((c, i) => (
+              <motion.div
+                key={c.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card rounded-xl shadow-card p-8 hover-lift"
+              >
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-5">
+                  <c.icon className="text-primary" size={26} />
+                </div>
+                <h3 className="font-heading text-2xl font-bold text-foreground mb-3">{c.title}</h3>
+                <p className="text-muted-foreground">{c.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What Sets Us Apart */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-14">
+            <span className="text-primary font-heading font-bold text-sm tracking-widest uppercase">What Sets Us Apart</span>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3">Why Brands Choose Trivanta</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Award, title: "Senior-Led Teams", desc: "Every project is led by senior researchers with 10+ years of category expertise — no junior handoffs." },
+              { icon: Globe2, title: "Global Reach", desc: "Active fieldwork capabilities across 25+ countries with multilingual moderation and culturally-tuned analysis." },
+              { icon: Users, title: "Custom Methodology", desc: "We don't sell templates. Every study is designed ground-up around your specific business question." },
+              { icon: CheckCircle, title: "Outcome-Focused", desc: "Our deliverables end with recommendations, not just findings. We help you decide, not just understand." },
+            ].map((f, i) => (
+              <motion.div
+                key={f.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="bg-card rounded-xl shadow-card p-6 hover-lift border-t-4 border-primary"
+              >
+                <f.icon className="text-primary mb-4" size={28} />
+                <h3 className="font-heading text-lg font-bold text-foreground mb-2">{f.title}</h3>
+                <p className="text-muted-foreground text-sm">{f.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
