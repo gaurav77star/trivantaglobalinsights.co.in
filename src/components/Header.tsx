@@ -9,7 +9,7 @@ const servicesDropdown = [
   { label: "Quantitative Research", path: "/services#quantitative" },
   { label: "Online Research", path: "/services#online" },
   { label: "Business Research", path: "/services#business" },
-  { label: "CATI Services", path: "/services#cati" },
+  { label: "CAWI Services", path: "/services#cawi" },
   { label: "Other Services", path: "/services#other" },
 ];
 
