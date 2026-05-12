@@ -21,6 +21,11 @@ const industriesDropdown = [
   { label: "Retail & Commerce", path: "/industries" },
   { label: "Healthcare", path: "/industries" },
   { label: "Technology", path: "/industries" },
+  { label: "Real Estate & PropTech", path: "/industries" },
+  { label: "Agriculture & AgriTech", path: "/industries" },
+  { label: "Food & FMCG", path: "/industries" },
+  { label: "Logistics & Supply Chain", path: "/industries" },
+  { label: "Gaming & Esports", path: "/industries" },
   { label: "View All Industries", path: "/industries" },
 ];
 
