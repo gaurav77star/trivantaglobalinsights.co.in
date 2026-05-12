@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, Mail } from "lucide-react";
+import { CheckCircle, Mail, Target, Eye, Compass, Award, Users, Globe2 } from "lucide-react";
 import Header from "@/components/Header";
 import StatsSection from "@/components/StatsSection";
 import Footer from "@/components/Footer";
