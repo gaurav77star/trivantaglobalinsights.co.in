@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
 const servicesDropdown = [
