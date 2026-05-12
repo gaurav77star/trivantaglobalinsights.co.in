@@ -1,9 +1,23 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { MapPin, Clock, Briefcase, ArrowRight } from "lucide-react";
+import { MapPin, Clock, Briefcase, ArrowRight, TrendingUp, Heart, GraduationCap, Globe, FileText, Users, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import careersHero from "@/assets/careers-hero.jpg";
+
+const benefits = [
+  { icon: TrendingUp, title: "Growth & Learning", desc: "Annual training budget, certifications sponsored, and mentorship from senior researchers." },
+  { icon: Heart, title: "Wellness First", desc: "Comprehensive health coverage, mental wellness support, and flexible time-off policies." },
+  { icon: Globe, title: "Remote Flexibility", desc: "Work from anywhere in India with quarterly in-person meetups and team retreats." },
+  { icon: GraduationCap, title: "Skill Development", desc: "Access to premium research tools, industry conferences, and cross-functional projects." },
+];
+
+const hiringSteps = [
+  { icon: FileText, title: "Apply", desc: "Submit your resume and a short note on why you're excited about the role." },
+  { icon: Phone, title: "Initial Chat", desc: "A 30-min conversation with our hiring team to understand your background and aspirations." },
+  { icon: Users, title: "Skills Round", desc: "A practical assessment or case study tailored to the role you're applying for." },
+  { icon: CheckCircle2, title: "Final Interview", desc: "Meet the leadership team, discuss your fit, and get an offer within a week." },
+];
 
 const vacancies = [
   { title: "Research Analyst", location: "Remote / India", type: "Full-Time", dept: "Research", desc: "Assist in designing and executing quantitative and qualitative research projects. Analyze data and prepare client-ready reports." },
