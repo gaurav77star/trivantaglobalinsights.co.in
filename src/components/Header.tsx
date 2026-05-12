@@ -213,13 +213,23 @@ const Header = () => {
             <button onClick={() => toggleMobileDropdown("careers")} className="font-heading font-semibold text-lg py-2 flex items-center justify-between text-foreground">
               Careers <ChevronDown size={16} className={`transition-transform ${mobileDropdown === "careers" ? "rotate-180" : ""}`} />
             </button>
-            {mobileDropdown === "careers" && (
-              <div className="pl-4 space-y-1">
-                {careersDropdown.map((item) => (
-                  <Link key={item.label} to={item.path} onClick={() => setMobileOpen(false)} className="block py-1.5 text-muted-foreground hover:text-primary text-sm">{item.label}</Link>
-                ))}
-              </div>
-            )}
+            <AnimatePresence initial={false}>
+              {mobileDropdown === "careers" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden"
+                >
+                  <div className="pl-4 space-y-1 pb-2">
+                    {careersDropdown.map((item) => (
+                      <Link key={item.label} to={item.path} onClick={() => setMobileOpen(false)} className="block py-1.5 text-muted-foreground hover:text-primary text-sm">{item.label}</Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             <Link to="/contact" onClick={() => setMobileOpen(false)} className={`font-heading font-semibold text-lg py-2 ${location.pathname === "/contact" ? "text-primary" : "text-foreground"}`}>
               Contact
