@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Landmark, Factory, Car, Zap, ShoppingCart, HeartPulse, Building2, Film, Cpu, Plane, GraduationCap } from "lucide-react";
+import { Landmark, Factory, Car, Zap, ShoppingCart, HeartPulse, Building2, Film, Cpu, Plane, GraduationCap, Home, Sprout, Shirt, Utensils, Truck, Gamepad2, Megaphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import industriesHero from "@/assets/industries-hero.jpg";
 
@@ -17,6 +17,13 @@ const industries = [
   { icon: Cpu, title: "Tech Innovation & Electronics", desc: "From SaaS platforms to consumer electronics, we deliver user experience research, feature prioritization studies, and competitive intelligence that fuels product-market fit." },
   { icon: Plane, title: "Hospitality & Travel Experiences", desc: "We bring traveler insights to hotels, airlines, and tourism boards — studying booking behaviors, loyalty drivers, and experience expectations to elevate hospitality standards." },
   { icon: GraduationCap, title: "Learning Solutions & EdTech", desc: "Our research helps EdTech companies and institutions understand learner needs, evaluate platform UX, and measure the effectiveness of digital learning tools across demographics." },
+  { icon: Home, title: "Real Estate & PropTech", desc: "We help developers, brokers, and PropTech platforms understand buyer intent, rental behavior, and neighborhood preferences — turning property decisions into data-backed strategies." },
+  { icon: Sprout, title: "Agriculture & AgriTech", desc: "From farmer adoption studies to supply chain mapping, we deliver insights that help agribusinesses, input providers, and AgriTech startups grow sustainably across rural India and beyond." },
+  { icon: Shirt, title: "Fashion, Beauty & Lifestyle", desc: "We decode evolving style preferences, brand affinities, and purchase triggers — helping apparel, cosmetics, and lifestyle brands stay culturally relevant and commercially sharp." },
+  { icon: Utensils, title: "Food, Beverage & FMCG", desc: "We track consumption habits, taste preferences, and shelf behavior to help FMCG and F&B brands launch winning products and refine their distribution playbooks." },
+  { icon: Truck, title: "Logistics & Supply Chain", desc: "Our research uncovers operational pain points, last-mile expectations, and B2B buyer journeys — empowering logistics providers to deliver faster, smarter, and more reliably." },
+  { icon: Gamepad2, title: "Gaming & Esports", desc: "We study player motivations, monetization triggers, and community dynamics to help gaming studios, publishers, and esports brands build engaging experiences that scale." },
+  { icon: Megaphone, title: "Advertising, Media & Brand Strategy", desc: "From ad concept testing to brand health tracking, we equip agencies and brand teams with insights that sharpen creative, messaging, and media investment decisions." },
 ];
 
 const IndustriesPage = () => {
