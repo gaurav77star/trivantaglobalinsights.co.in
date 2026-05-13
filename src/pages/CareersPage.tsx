@@ -33,7 +33,7 @@ const CareersPage = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="pt-20 relative overflow-hidden min-h-[60vh] flex items-center">
+      <section className="pt-32 pb-20 relative overflow-hidden min-h-[60vh] flex items-center bg-gradient-to-br from-foreground via-foreground to-foreground/90">
         <div className="absolute inset-0">
           <img src={careersHero} alt="" className="w-full h-full object-cover" />
         </div>
