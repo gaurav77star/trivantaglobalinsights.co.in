@@ -40,7 +40,7 @@ export const teamMembers: TeamMember[] = [
     image: shivamImg,
     bio: "Shivam oversees end-to-end project operations at Trivanta. He brings precision, structure and a quality-first mindset — making sure every study runs smoothly, on time and to the highest research standards.",
     linkedin: "https://www.linkedin.com/in/shivam-raghuvan-495027202",
-    email: "shivam@trivantaglobal.com",
+    email: "shivamchauhan555551@gmail.com",
   },
   {
     id: "titu-rajput",
@@ -48,6 +48,6 @@ export const teamMembers: TeamMember[] = [
     role: "Account Manager",
     image: tituImg,
     bio: "Titu is the bridge between Trivanta and its clients. He manages day-to-day client relationships, ensures clear communication and works closely with the research team to deliver experiences that go beyond expectations.",
-    email: "titu@trivantaglobal.com",
+    email: "pmteams.trivantaglobalinsights@gmail.com",
   },
 ];
