@@ -31,7 +31,7 @@ export const teamMembers: TeamMember[] = [
     image: gauravImg,
     bio: "Gaurav leads Trivanta with a sharp focus on strategy, client success and long-term growth. With deep expertise in market research and consulting, he ensures every engagement delivers clear, actionable insight that drives real business decisions.",
     linkedin: "https://www.linkedin.com/in/gaurav-kumar-87a54b240",
-    email: "gaurav@trivantaglobal.com",
+    email: "gauravmahur704@gmail.com",
   },
   {
     id: "shivam-chauhan",
